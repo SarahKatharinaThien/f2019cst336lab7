@@ -81,9 +81,6 @@ function getImages(keyword, orientation) {
                 if (!error && response.statusCode == 200) { //no issues in the request
                     let parsedData = JSON.parse(body); //converts string to JSON
                     resolve(parsedData);
-                    //let randomIndex = Math.floor(Math.random() * parsedData.hits.length);
-                    //res.send(`<img src='${parsedData.hits[randomIndex].largeImageURL}'>`);
-                    //res.render("index", {"image":parsedData.hits[randomIndex].largeImageURL});
                 } else {
                     reject(error);
                     console.log(response.statusCode);
